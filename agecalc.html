@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+
+    <!-- css style -->
+    <link rel="stylesheet" href="agecalc.css">
+
+    <!-- font style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+
+</head>
+<body class="body__background">
+
+    <section class="container">
+
+            <div class="container__date--data">
+                <label for="day" class="container__date container__date--size day--header">DAY</label>
+                <label for="month" class="container__date container__date--size month--header">MONTH</label>
+                <label for="year" class="container__date container__date--size year--header">YEAR</label>
+                <input type="text" name="" id="day" class="container__input--field container__date day--border" placeholder="DD" maxlength="2" minlength="2" required>
+                <input type="text" name="" id="month" class="container__input--field container__date month--border" placeholder="MM" maxlength="2" minlength="2" required>
+                <input type="text" name="" id="year" class="container__input--field container__date year--border" placeholder="YYYY" maxlength="4" minlength="4" required>
+                <h5 class="container__date--errormsg container__date--noerror day--requirement">This field is required</h5>
+                <h5 class="container__date--errormsg container__date--noerror month--requirement">This field is required</h5>
+                <h5 class="container__date--errormsg container__date--noerror year--requirement">This field is required</h5>
+                <h5 class="container__date--errormsg container__date--noerror day--validity">Must be a valid day</h5>
+                <h5 class="container__date--errormsg container__date--noerror month--validity">Must be a valid month</h5>
+                <h5 class="container__date--errormsg container__date--noerror year--validity">Must be in the past</h5>
+                <h5 class="container__date--invaliddata container__date--noerror invalid--daytomonth">Must be a valid date</h5>
+            </div>
+
+            <div class="container__imgrw">
+                <hr class="container__border">
+                <img src="assets/images/icon-arrow.svg" alt="" class="container__arrowimg">
+            </div>
+
+            <div class="container__date--info">
+                <h1><span class="container__dateinfo--fig" id="container__year--info">--</span> years</h1>
+                <h1><span class="container__dateinfo--fig" id="container__month--info">--</span> months</h1>
+                <h1><span class="container__dateinfo--fig" id="container__day--info">--</span> days</h1>
+            </div>
+
+    </section>
+
+    <script src="agecalc.js"></script>
+</body>
+</html>

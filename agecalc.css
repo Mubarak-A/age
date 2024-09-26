@@ -1,0 +1,235 @@
+/* general style */
+
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
+  }
+  
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+  
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+  
+ol, ul {
+    list-style: none;
+}
+  
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h2, h3, h4 {
+      font-family: "Poppins", sans-serif;
+      font-weight: 500;
+      font-style: normal;    
+}
+
+
+
+/* desktop style */
+
+.body__background {
+    background-color: hsl(0, 0%, 86%);
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: hsl(0, 0%, 100%);
+    padding: 15px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 50px;
+}
+
+.container__date--data {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto auto auto;
+    row-gap: 5px;
+    column-gap: 10px;
+    margin-right: 60px;
+}
+
+.container__date {
+    max-width: 60px;
+}
+
+.container__date--info h1 {
+    font-weight: inherit;
+}
+
+.container__date--info {
+    margin-right: 60px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+    font-size: 24px;
+}
+
+.container__input--field {
+    border: thin solid;
+    border-radius: 5px;
+}
+
+.container__arrowimg {
+    border: solid hsl(259, 100%, 65%);
+    border-radius: 100%;
+    background-color: hsl(259, 100%, 65%);
+    padding: 5px;  
+    max-width: 32px;
+}
+
+.container__dateinfo--fig {
+    color: hsl(259, 100%, 65%);
+}
+
+.container__border {
+    min-width: 240px;
+}
+
+.container__imgrw {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container__date--size {
+    font-size: 6px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.container__date {
+    color:  hsl(0, 1%, 44%);
+}
+
+.container__input--field {
+    font-size: 10px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    padding: 2px 5px;
+    height: 25px;
+    color: hsl(0, 0%, 8%);
+    border: thin solid hsl(0, 1%, 44%);
+}
+
+.container__input--field:hover {
+    cursor: pointer;
+}
+
+.year--validity, .month--validity, .day--validity {
+    grid-row: 3;
+}
+
+.day--requirement, .month--requirement, .year--requirement {
+    grid-row: 3;
+}
+
+.invalid--daytomonth {
+    grid-row: 3;
+    grid-column: 1/2;
+}
+
+.day--validity, .day--requirement {
+    grid-column: 1/2;
+}
+
+.month--validity, .month--requirement {
+    grid-column: 2/3;
+}
+
+.year--validity, .year--requirement {
+    grid-column: 3/4;
+}
+
+.container__arrowimg:hover {
+    background-color: hsl(0, 0%, 8%);
+    cursor: pointer;
+    border-color: black;
+}
+
+.container__date--errordata {
+    color: hsl(0, 100%, 67%);
+}
+
+.container__date--errorborder {
+    border: thin solid hsl(0, 100%, 67%);
+}
+
+.container__date--errormsg {
+    color: hsl(0, 100%, 67%);
+    font-size: 5px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.container__date--noerror {
+    display: none;
+}
+
+.container__date--invaliddata {
+    color: hsl(0, 100%, 67%);
+    font-size: 5px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+
+
+/* mobile style */
+@media screen and (max-width: 375px) {
+    .container__imgrw {
+        position: relative;
+        margin: 20px 0;
+    }
+
+    .container__date--data {
+        margin-right: 0;
+    }
+    
+    .container__date--info {
+        margin-right: 0;
+    }
+
+    .container__arrowimg {
+        position: absolute;
+        align-self: center;
+    }
+
+    .container__border {
+        min-width: -webkit-fill-available;
+    }
+
+    .container__arrowimg {
+        max-width: 40px;
+        padding: 8px;
+    }
+
+    .container {
+        padding: 25px 15px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 50px;
+    }
+
+    .container__input--field {
+        max-width: 50px;
+        height: 30px;
+    }
+}
